@@ -1,3 +1,3 @@
-Func _ConsentButtonSelector()
-    Return '//div[@role="dialog"]//button[contains(@class, "fc-cta-consent")]'
+Func _AcceptButtonSelector()
+    Return '//button[@id="L2AGLb"]'
 EndFunc
