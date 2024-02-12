@@ -54,7 +54,10 @@ Distributed under the MIT License. See [LICENSE](https://github.com/Sven-Seyfert
 
 - Opportunity by [GitHub](https://github.com)
 - Badges by [Shields](https://shields.io)
-- Dependencies will be mentioned grateful very soon
+- Thanks to the authors, maintainers and contributers of the various projects and UDFs
+  - lib/au3WebDriver/wd_*.au3 by [@Danp2](https://github.com/Danp2) and [@mLipok](https://github.com/mLipok) ([License: MIT](lib/au3WebDriver/MIT.md))
+  - lib/json/*.au3 by @Ward, @Jos and @TheXMan ([License: Unlicense](lib/json/Unlicense.md))
+  - lib/winHttp/*.au3 by @trancexx/[@dragana-r](https://github.com/dragana-r) ([License: Apache-2.0](lib/winHttp/Apache-2.0.md))
 
 ##
 
