@@ -11,13 +11,29 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.2.0] - 2024-02-12
+
+### Changed
+
+- Extract 'take screenshot' actions into separate function. [84d84a2](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/-/commit/84d84a201cebed17943feabefc3899a1726837f0)
+
+### Documented
+
+- Add feature overview table in README.md file. [a8f0856](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/-/commit/a8f0856eee3c6bafdd4f444b2a5fac7345ed9662)
+- Mention authors in acknowledgements section of the README.md file and add licenses. [b784abb](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/-/commit/b784abbd26987f16163416efbf8752dc65707ff6)
+
+### Removed
+
+- Unnecessary logging to console. [25b2802](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/-/commit/25b2802d001781a691b7b3ec0fdc5ddb0f340f2d)
+
 ## [0.1.0] - 2024-02-11
 
 ### Added
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/releases/tag/v0.1.0
 
 ---
