@@ -8,8 +8,9 @@ Func _Steps()
     _ConfirmConsentDialog()
     _NavigateToTextBoxes()
     _FillFormTextBoxes()
+    _TakeScreenhotsOfFormAreas()
 
-    ConsoleWrite('Sleep(1500) and END!' & @CRLF)
+    ConsoleWrite('Automation steps completed!' & @CRLF)
     Sleep(1500)
 EndFunc
 

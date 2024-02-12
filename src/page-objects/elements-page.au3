@@ -10,6 +10,9 @@ Func _FillFormTextBoxes()
     _SetElementText(_EmailInputSelector(), 'john.constantine@gmail.com')
     _SetElementText(_AddressInputSelector(), StringFormat('Dittrichring 17\n04109 Leipzig'))
 
+EndFunc
+
+Func _TakeScreenhotsOfFormAreas()
     _TakeElementScreenshot(_EmailInputSelector())
     _TakeScreenshot()
 EndFunc
