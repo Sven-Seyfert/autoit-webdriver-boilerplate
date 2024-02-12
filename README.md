@@ -1,7 +1,7 @@
 #####
 
 <p align="center">
-    <img src="assets/images/logo.png" width="80" />
+    <img src="assets/images/logo.png" width="100" />
     <h2 align="center">Welcome to <code>au3webdriver-boilerplate</code>【ツ】</h2>
 </p>
 
@@ -22,7 +22,12 @@ The project "au3webdriver-boilerplate" can be used as quick entry point for the 
 
 ## Features
 
-To be defined [...]
+The different kinds of examples, are (and will be) separated in different branches of the repository. In this overview you basically can see which branch contains which example of WebDriver actions.
+
+| branch | short example description |
+| ---    | ---                       |
+| main   | - open website<br>- confirm cookie consent dialog<br>- navigate to specific area<br>- fill a form<br>- take screenshots  |
+| ...    | ... |
 
 ## Getting started
 
