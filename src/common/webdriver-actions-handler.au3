@@ -68,8 +68,6 @@ Func _CreateScreenshotFile($sResponse)
     Local Const $sTimestamp      = @YEAR & @MON & @MDAY & '-' & @HOUR & @MIN & @SEC & '.' & @MSEC
     Local Const $sScreenshotPath = _PathFull('..\data\output\')
 
-    ConsoleWrite(_Backslash($sScreenshotPath) & $sTimestamp & '.png' & @CRLF)
-
     _WriteFileBinary(_Backslash($sScreenshotPath) & $sTimestamp & '.png', $bDecode)
 EndFunc
 
