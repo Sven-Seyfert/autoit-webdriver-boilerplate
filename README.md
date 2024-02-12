@@ -6,11 +6,11 @@
 </p>
 
 [![license](https://img.shields.io/badge/license-MIT-indianred.svg?style=flat-square&logo=spdx&logoColor=white)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/main/LICENSE.md)
-[![tag](https://img.shields.io/github/tag/Sven-Seyfert/au3webdriver-boilerplate.svg?color=slateblue&style=flat-square&logo=github)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/tags)
 [![release](https://img.shields.io/github/release/Sven-Seyfert/au3webdriver-boilerplate.svg?color=slateblue&style=flat-square&logo=github)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/releases/latest)
 [![autoit](https://img.shields.io/badge/lang-AutoIt-lightskyblue.svg?style=flat-square&logo=autodesk&logoColor=white)]()
 [![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/au3webdriver-boilerplate.svg?color=darkgoldenrod&style=flat-square&logo=github)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commits/main)
 [![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/au3webdriver-boilerplate.svg?color=darkolivegreen&style=flat-square&logo=github)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/graphs/contributors)
+[![Discord](https://img.shields.io/badge/Discord-AutoIt_Community_Projects-%235865F2.svg?style=flat-square&logo=discord&logoColor=white)]()
 
 ---
 
