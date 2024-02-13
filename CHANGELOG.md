@@ -11,20 +11,36 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.3.0] - 2024-02-13
+
+### Changed
+
+- Get rid of initial example code and apply new default main branch example. [a076d07](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/a076d074aea2bdfb2e8614adffa0c2388a427e41)
+- Get rid of main branch example code and apply new goole-search example. [9ce1b0e](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/9ce1b0e331fcb862ff09974f5b14b0c92bc8f785)
+
+### Documented
+
+- Added Discord server to README.md file (not linked yet). [d59527b](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/d59527b803cbb72f88a67ee4d2e524f88872d749)
+- Extend feature overview table in README.md file by additional column. [c6c0294](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/c6c02947ac43cf35986f465add2003e8e03131fa)
+
+### Styled
+
+- Minor adjustment (remove empty line). [b60d8dc](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/b60d8dc0bd833383bc36587cf594ea35ca150d65)
+
 ## [0.2.0] - 2024-02-12
 
 ### Changed
 
-- Extract 'take screenshot' actions into separate function. [84d84a2](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/-/commit/84d84a201cebed17943feabefc3899a1726837f0)
+- Extract 'take screenshot' actions into separate function. [84d84a2](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/84d84a201cebed17943feabefc3899a1726837f0)
 
 ### Documented
 
-- Add feature overview table in README.md file. [a8f0856](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/-/commit/a8f0856eee3c6bafdd4f444b2a5fac7345ed9662)
-- Mention authors in acknowledgements section of the README.md file and add licenses. [b784abb](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/-/commit/b784abbd26987f16163416efbf8752dc65707ff6)
+- Add feature overview table in README.md file. [a8f0856](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/a8f0856eee3c6bafdd4f444b2a5fac7345ed9662)
+- Mention authors in acknowledgements section of the README.md file and add licenses. [b784abb](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/b784abbd26987f16163416efbf8752dc65707ff6)
 
 ### Removed
 
-- Unnecessary logging to console. [25b2802](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/-/commit/25b2802d001781a691b7b3ec0fdc5ddb0f340f2d)
+- Unnecessary logging to console. [25b2802](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/25b2802d001781a691b7b3ec0fdc5ddb0f340f2d)
 
 ## [0.1.0] - 2024-02-11
 
@@ -32,7 +48,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/releases/tag/v0.1.0
 
