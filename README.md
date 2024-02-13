@@ -24,11 +24,11 @@ The project "au3webdriver-boilerplate" can be used as quick entry point for the 
 
 The different kinds of examples, are (and will be) separated in different branches of the repository. In this overview you basically can see which branch contains which example of WebDriver actions.
 
-| Branch                      | WebDriver actions                                                                                                       | Websites in use                                                                                                                              |
-| ---                         | ---                                                                                                                     | ---                                                                                                                                          |
-| `main`                      | - open website<br>- navigate between pages<br>- get table texts                                                         | [https://www.w3schools.com/](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/main/src/website-steps-handler.au3)               |
-| `fill-form-take-screenshot` | - open website<br>- confirm cookie consent dialog<br>- navigate to specific area<br>- fill a form<br>- take screenshots | [https://demoqa.com/](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/fill-form-take-screenshot/src/website-steps-handler.au3) |
-| `google-search`             | - open website<br>- confirm cookie consent dialog<br>- enter search query<br>- choose specific match by text            | [https://www.google.de/](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/google-search/src/website-steps-handler.au3)          |
+| Branch                      | Description of the WebDriver actions                                                                                    | Websites in use            | Browser automation<br>flow (steps)                                                                                            |
+| ---                         | ---                                                                                                                     | ---                        | ---                                                                                                                           |
+| `main`                      | - open website<br>- navigate between pages<br>- get table texts                                                         | https://www.w3schools.com/ | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/main/src/website-steps-handler.au3)                      |
+| `fill-form-take-screenshot` | - open website<br>- confirm cookie consent dialog<br>- navigate to specific area<br>- fill a form<br>- take screenshots | https://demoqa.com/        | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/fill-form-take-screenshot/src/website-steps-handler.au3) |
+| `google-search`             | - open website<br>- confirm cookie consent dialog<br>- enter search query<br>- choose specific match by text            | https://www.google.de/     | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/google-search/src/website-steps-handler.au3)             |
 
 ## Getting started
 
