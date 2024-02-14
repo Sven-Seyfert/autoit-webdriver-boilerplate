@@ -22,7 +22,7 @@ The project "au3webdriver-boilerplate" can be used as quick entry point for the 
 
 ## Features
 
-The different kinds of examples, are (and will be) separated in different branches of the repository. In this overview you basically can see which branch contains which example of WebDriver actions.
+The different kinds of **examples**, are (and will be) separated in different branches of the repository. In this overview you basically can see which branch contains which example of WebDriver actions. Some examples and their code could be implemented in a shorter way, but this is made by design and follows a educational purpose.
 
 | Branch                      | Description of the WebDriver actions                                                                                    | Websites in use            | Browser automation<br>flow (steps)                                                                                            |
 | ---                         | ---                                                                                                                     | ---                        | ---                                                                                                                           |
@@ -34,19 +34,21 @@ The different kinds of examples, are (and will be) separated in different branch
 
 #### *Preconditions*
 
-To be defined [...]
+As assumption, your "browser" of choice which should be automated, have to be installed on your system. Not the "driver" (chromedriver.exe, geckodriver.exe etc.), your browser.
 
 #### *Installation*
 
-To be defined [...]
+Fork or clone the repository. Alternatively you can download the [latest release](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/releases/lastest) package. That should be all.
 
 #### *Usage*
 
-To be defined [...]
+Open the project in your Editor/IDE and vavigate to folder `src`. Open `main.au3`, check and adjsut the values of function `_SetGlobalValues()` and start the program. By default, in case you fulfill the [preconditions](#preconditions), the driver should start and should execute some simple webdriver actions like described in the [features](#features) section (for the specific branch).
+
+Adjust the `_Steps()` function content in `website-steps-handler.au3` to your requirements and goals, use the prepared wrapper functions in `src\common\webdriver-actions-handler.au3` and in the best case, you also want to follow the POM (page object model) structure like prepared too.
 
 ## Configuration
 
-To be defined [...]
+Adjust the content/values of function `_SetGlobalValues()` in `src\main.au3`.
 
 ## Contributing
 
