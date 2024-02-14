@@ -50,6 +50,22 @@ Adjust the `_Steps()` function content in `website-steps-handler.au3` to your re
 
 Adjust the content/values of function `_SetGlobalValues()` in `src\main.au3`.
 
+``` autoit
+Func _SetGlobalValues(ByRef $mConfig)
+    $mConfig.Driver          = 'firefox' ; chrome|firefox|msedge
+    $mConfig.IsHeadlessMode  = False     ; False|True
+    $mConfig.Delay           = 300       ; delay for supporting a robust waiting behavior (page load, clicks, texts etc.)
+    $mConfig.BrowserWidth    = 1920      ; or 1440, etc.
+    $mConfig.BrowserHeight   = 1080      ; or 810, etc.
+    $mConfig.LocatorStrategy = Null      ; will be set in function "_SetLocatorStrategy()"
+
+    ; HINT: This is the default installation path, change this in case it's another on your system.
+    $mConfig.FirefoxBinary = 'C:\Program Files\Mozilla Firefox\firefox.exe'
+
+    $bAlreadyTeardown = False
+EndFunc
+```
+
 ## Contributing
 
 To be defined [...]
