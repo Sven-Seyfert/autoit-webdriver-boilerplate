@@ -38,7 +38,7 @@ As assumption, your "browser" of choice which should be automated, have to be in
 
 #### *Installation*
 
-Fork or clone the repository. Alternatively you can download the [latest release](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/releases/lastest) package. That should be all.
+Fork or clone the repository. Alternatively you can download the [latest release](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/releases/latest) package. That should be all.
 
 #### *Usage*
 
