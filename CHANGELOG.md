@@ -11,6 +11,17 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.4.0] - 2024-02-18
+
+### Changed
+
+- Renew 'chrome for testing' driver url in wd_core.au3 file. [ff52e04](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/ff52e04cf0fcd80a29f1a2d545caf384d6010a33)
+
+### Documented
+
+- Add example of function '_SetGlobalValues()' in README.md file. [133a200](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/133a200613ea1c3a42086c638cd06fcc2245ce10)
+- Extend README.md file by more instructions. [f7aeea5](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/f7aeea598145d76855337695e2687fce78358369)
+
 ## [0.3.0] - 2024-02-13
 
 ### Changed
@@ -48,7 +59,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/releases/tag/v0.1.0
