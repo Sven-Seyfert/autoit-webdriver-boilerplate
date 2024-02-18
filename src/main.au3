@@ -1,6 +1,6 @@
-#pragma compile(FileVersion, 0.3.0)
+#pragma compile(FileVersion, 0.4.0)
 #pragma compile(LegalCopyright, © Sven Seyfert (SOLVE-SMART))
-#pragma compile(ProductVersion, 0.3.0 - 2024-02-13)
+#pragma compile(ProductVersion, 0.4.0 - 2024-02-18)
 
 #AutoIt3Wrapper_AU3Check_Parameters=-d -w 1 -w 2 -w 4 -w 5 -w 6 -w 7
 #AutoIt3Wrapper_AU3Check_Stop_OnWarning=y
