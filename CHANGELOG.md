@@ -11,6 +11,12 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.5.0] - 2024-02-26
+
+### Added
+
+- BrowserMode as option to resize the browser to a maximized window or a fullscreen window. [39904d3](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/39904d3232c1c515a94901ac8de1731c28445f77)
+
 ## [0.4.0] - 2024-02-18
 
 ### Changed
@@ -59,7 +65,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.1.0...v0.2.0
