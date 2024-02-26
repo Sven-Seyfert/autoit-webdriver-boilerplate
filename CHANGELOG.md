@@ -11,6 +11,21 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.6.0] - 2024-02-27
+
+### Added
+
+- New functions in 'webdriver-actions-handler.au3' file for handling multiple browser tabs. [70ac8d3](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/70ac8d3de39e8dbc406671e723dedfedd3c763a3)
+- New steps functions which represents the multiple tab handling examples. [c75278f](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/c75278fec37e4caf825fb17fdef60ce133f83b30)
+
+### Changed
+
+- Extend .gitignore file. [98da771](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/98da771ccebb6190b0dc9d62fbabb6d36ec84e76)
+
+### Documented
+
+- Add new example (branch content) to the README.md file. [41aafe1](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/41aafe12ad10991a13416be225e0539d0b33a4be)
+
 ## [0.5.0] - 2024-02-26
 
 ### Added
@@ -65,7 +80,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.2.0...v0.3.0
