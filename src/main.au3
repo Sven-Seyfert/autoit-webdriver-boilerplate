@@ -1,6 +1,6 @@
-#pragma compile(FileVersion, 0.4.0)
+#pragma compile(FileVersion, 0.5.0)
 #pragma compile(LegalCopyright, © Sven Seyfert (SOLVE-SMART))
-#pragma compile(ProductVersion, 0.4.0 - 2024-02-18)
+#pragma compile(ProductVersion, 0.5.0 - 2024-02-26)
 
 #AutoIt3Wrapper_AU3Check_Parameters=-d -w 1 -w 2 -w 4 -w 5 -w 6 -w 7
 #AutoIt3Wrapper_AU3Check_Stop_OnWarning=y
@@ -50,6 +50,7 @@ Func _SetGlobalValues(ByRef $mConfig)
     $mConfig.BrowserWidth    = 1920      ; or 1440, etc.
     $mConfig.BrowserHeight   = 1080      ; or 810, etc.
     $mConfig.LocatorStrategy = Null      ; will be set in function "_SetLocatorStrategy()"
+    $mConfig.BrowserMode     = 'size'    ; fullscreen|maximize|size (default is 'size' which applies .BrowserWidth and .BrowserHeight)
 
     ; HINT: This is the default installation path, change this in case it's another on your system.
     $mConfig.FirefoxBinary = 'C:\Program Files\Mozilla Firefox\firefox.exe'
