@@ -50,6 +50,7 @@ Func _SetGlobalValues(ByRef $mConfig)
     $mConfig.BrowserWidth    = 1920      ; or 1440, etc.
     $mConfig.BrowserHeight   = 1080      ; or 810, etc.
     $mConfig.LocatorStrategy = Null      ; will be set in function "_SetLocatorStrategy()"
+    $mConfig.BrowserMode     = 'size'    ; fullscreen|maximize|size (default is 'size' which applies .BrowserWidth and .BrowserHeight)
 
     ; HINT: This is the default installation path, change this in case it's another on your system.
     $mConfig.FirefoxBinary = 'C:\Program Files\Mozilla Firefox\firefox.exe'

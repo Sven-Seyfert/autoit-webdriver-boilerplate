@@ -26,7 +26,7 @@ The different kinds of **examples**, are (and will be) separated in different br
 
 | Branch                      | Description of the WebDriver actions                                                                                    | Websites in use            | Browser automation<br>flow (steps)                                                                                            |
 | ---                         | ---                                                                                                                     | ---                        | ---                                                                                                                           |
-| `main`                      | - open website<br>- navigate between pages<br>- get table texts                                                         | https://www.w3schools.com/ | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/main/src/website-steps-handler.au3)                      |
+| `main`                      | - open website<br>- confirm cookie consent dialog<br>- navigate between pages<br>- get table texts                      | https://www.w3schools.com/ | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/main/src/website-steps-handler.au3)                      |
 | `fill-form-take-screenshot` | - open website<br>- confirm cookie consent dialog<br>- navigate to specific area<br>- fill a form<br>- take screenshots | https://demoqa.com/        | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/fill-form-take-screenshot/src/website-steps-handler.au3) |
 | `google-search`             | - open website<br>- confirm cookie consent dialog<br>- enter search query<br>- choose specific match by text            | https://www.google.de/     | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/google-search/src/website-steps-handler.au3)             |
 
@@ -58,6 +58,7 @@ Func _SetGlobalValues(ByRef $mConfig)
     $mConfig.BrowserWidth    = 1920      ; or 1440, etc.
     $mConfig.BrowserHeight   = 1080      ; or 810, etc.
     $mConfig.LocatorStrategy = Null      ; will be set in function "_SetLocatorStrategy()"
+    $mConfig.BrowserMode     = 'size'    ; fullscreen|maximize|size (default is 'size' which applies .BrowserWidth and .BrowserHeight)
 
     ; HINT: This is the default installation path, change this in case it's another on your system.
     $mConfig.FirefoxBinary = 'C:\Program Files\Mozilla Firefox\firefox.exe'
