@@ -44,6 +44,8 @@ Func _SetupDriver()
     EndSwitch
 
     $sSession = _WD_CreateSession($sCapabilities)
+
+    _ResizeBrowser()
 EndFunc
 
 Func _SetDriverOptions()
@@ -125,6 +127,13 @@ Func _BuildEdgeDriverCapabilities()
     EndIf
 
     Return _WD_CapabilitiesGet()
+EndFunc
+
+Func _ResizeBrowser()
+    Switch StringLower($mConfig.BrowserMode)
+        Case 'maximize', 'fullscreen'
+            _WD_Window($sSession, $mConfig.BrowserMode)
+    EndSwitch
 EndFunc
 
 Func _TeardownDriver()
