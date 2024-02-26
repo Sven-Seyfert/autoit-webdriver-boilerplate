@@ -3,6 +3,92 @@ Func _NavigateTo($sUrl)
     _WD_LoadWait($sSession, $mConfig.Delay)
 EndFunc
 
+Func _OpenNewTab()
+    _WD_Window($sSession, 'new', '{"type":"tab"}')
+
+    Local Const $aListOfBrowserTabHandles = _GetBrowserTabHandles()
+    Local Const $iCount  = _GetCount($aListOfBrowserTabHandles)
+    Local Const $sHandle = $aListOfBrowserTabHandles[$iCount]
+
+    _SwitchTab($sHandle)
+EndFunc
+
+Func _GetCurrentBrowserTabHandle()
+    Return _WD_Window($sSession, 'window')
+EndFunc
+
+Func _GetBrowserTabHandles()
+    Return _WD_Window($sSession, 'handles')
+EndFunc
+
+Func _PreviousTab()
+    Local Const $sCurrentBrowserTabHandle = _GetCurrentBrowserTabHandle()
+    Local Const $aListOfBrowserTabHandles = _GetBrowserTabHandles()
+    Local Const $iCount = _GetCount($aListOfBrowserTabHandles)
+
+    Local $sHandle = Null
+
+    For $i = 0 To $iCount Step 1
+        If $aListOfBrowserTabHandles[$i] <> $sCurrentBrowserTabHandle Then
+            ContinueLoop
+        EndIf
+
+        If $i > 0 Then
+            $sHandle = $aListOfBrowserTabHandles[$i - 1]
+        EndIf
+
+        If $i == 0 Then
+            $sHandle = $aListOfBrowserTabHandles[$iCount]
+        EndIf
+
+        _SwitchTab($sHandle)
+
+        ExitLoop
+    Next
+EndFunc
+
+Func _NextTab($bShouldClose = False)
+    Local Const $sCurrentBrowserTabHandle = _GetCurrentBrowserTabHandle()
+    Local Const $aListOfBrowserTabHandles = _GetBrowserTabHandles()
+    Local Const $iCount = _GetCount($aListOfBrowserTabHandles)
+
+    Local $sHandle = Null
+
+    For $i = 0 To $iCount Step 1
+        If $aListOfBrowserTabHandles[$i] <> $sCurrentBrowserTabHandle Then
+            ContinueLoop
+        EndIf
+
+        If $i < $iCount Then
+            $sHandle = $aListOfBrowserTabHandles[$i + 1]
+        EndIf
+
+        If $i == $iCount Then
+            $sHandle = $aListOfBrowserTabHandles[0]
+        EndIf
+
+        If $bShouldClose And $iCount > 0 Then
+            _WD_Window($sSession, 'close')
+        EndIf
+
+        _SwitchTab($sHandle)
+
+        ExitLoop
+    Next
+EndFunc
+
+Func _SwitchTab($sHandle)
+    _WD_Window($sSession, 'switch', '{"handle":"' & $sHandle & '"}')
+EndFunc
+
+Func _CloseTab()
+    _NextTab(True)
+EndFunc
+
+Func _BrowserBack()
+    _WD_Action($sSession, 'back')
+EndFunc
+
 Func _ClickElement($sSelector)
     _WaitForVisible($sSelector)
     _WD_ElementAction($sSession, _FindElement($sSelector), 'click')
