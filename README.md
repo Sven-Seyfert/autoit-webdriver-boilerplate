@@ -22,6 +22,8 @@ The project "au3webdriver-boilerplate" can be used as quick entry point for the 
 
 ## Features
 
+#### *Branches*
+
 The different kinds of **examples**, are (and will be) separated in different branches of the repository. In this overview you basically can see which branch contains which example of WebDriver actions. Some examples and their code could be implemented in a shorter way, but this is made by design and follows a educational purpose.
 
 | Branch                      | Description of the WebDriver actions                                                                                                                     | Websites in use                                                                                                                                                 | Browser automation<br>flow (steps)                                                                                            |
@@ -30,6 +32,33 @@ The different kinds of **examples**, are (and will be) separated in different br
 | `fill-form-take-screenshot` | - open website<br>- confirm cookie consent dialog<br>- navigate to specific area<br>- fill a form<br>- take screenshots                                  | - https://demoqa.com/                                                                                                                                           | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/fill-form-take-screenshot/src/website-steps-handler.au3) |
 | `google-search`             | - open website<br>- confirm cookie consent dialog<br>- enter search query<br>- choose specific match by text                                             | - https://www.google.de/                                                                                                                                        | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/google-search/src/website-steps-handler.au3)             |
 | `multiple-browser-tabs`     | - open website<br>- open three more websites in separate browser tabs<br>- do actions (screenshots) for each tabs<br>- navigate through tabs, close tabs | - https://github.com/Sven-Seyfert/au3webdriver-boilerplate<br>- https://www.autoitscript.com/wiki/WebDriver#FAQ<br>- https://autoit.de<br>- https://pkg.go.dev  | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/multiple-browser-tabs/src/website-steps-handler.au3)     |
+
+#### *WebDriver actions function list*
+
+In file `src/common/webdriver-actions-handler.au3` you can find the following functions which should help you in terms of browser automation actions. These functions are used in the different branches and especially in the `_Steps()` function and their subfunctions (entry point of the browser automation).
+
+| Function                               | Purpose                                                                                           |
+| ---                                    | ---                                                                                               |
+| `_NavigateTo($sUrl)`                   | Open the specific URL.                                                                            |
+| `_OpenNewTab()`                        | Open new tab and switch to the newly created tab context.                                         |
+| `_GetCurrentBrowserTabHandle()`        | Get the active browser tab handle, to deal with tab navigation.                                   |
+| `_GetBrowserTabHandles()`              | Get handles of all browser tabs, to deal with tab navigation.                                     |
+| `_PreviousTab()`                       | Switch to previous (left) tab with context switch.                                                |
+| `_NextTab($bShouldClose = False)`      | Switch to next (right) tab with context switch.                                                   |
+| `_SwitchTab($sHandle)`                 | Switch to tab handle context.                                                                     |
+| `_CloseTab()`                          | Close current active tab and switch to next (right) tab, with context.                            |
+| `_BrowserBack()`                       | Make a browser history back action (backward arrow).                                              |
+| `_ClickElement($sSelector)`            | Click DOM element by selector.                                                                    |
+| `_WaitForVisible($sSelector)`          | Wait until a element is visible.                                                                  |
+| `_FindElement($sSelector)`             | Get element id (UUID) which is necessary to interact with the DOM elements.                       |
+| `_FindElements($sSelector)`            | Get a list of elements (of UUIDs) for further interactions (see "_FindElement").                  |
+| `_GetElementText($sSelector)`          | Get the text of the specific DOM element.                                                         |
+| `_GetElementsTexts($sSelector)`        | Get a list of texts of the specific DOM elements.                                                 |
+| `_SetElementText($sSelector, $sValue)` | Set text to a element like an input field.                                                        |
+| `_TakeElementScreenshot($sSelector)`   | Create a screenshot of a specific area/element and save this screenshot in the output directory.  |
+| `_TakeScreenshot()`                    | Create a screenshot of the whole browser window and save this screenshot in the output directory. |
+| `_EnterIFrame($sSelector)`             | Move context to an iFrame.                                                                        |
+| `_LeaveIFrame()`                       | Leave the context of the previous entered iFrame (move out).                                      |
 
 ## Getting started
 
