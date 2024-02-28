@@ -35,7 +35,7 @@ The different kinds of **examples**, are (and will be) separated in different br
 
 #### *WebDriver actions function list*
 
-In file `src/common/webdriver-actions-handler.au3` you can find the following functions which should help you in terms of browser automation actions.
+In file `src/common/webdriver-actions-handler.au3` you can find the following functions which should help you in terms of browser automation actions. These functions are used in the different branches and especially in the `_Steps()` function and their subfunctions (entry point of the browser automation).
 
 | Function                               | Purpose                                                                                           |
 | ---                                    | ---                                                                                               |
