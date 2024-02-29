@@ -13,14 +13,6 @@ Func _OpenNewTab()
     _SwitchTab($sHandle)
 EndFunc
 
-Func _GetCurrentBrowserTabHandle()
-    Return _WD_Window($sSession, 'window')
-EndFunc
-
-Func _GetBrowserTabHandles()
-    Return _WD_Window($sSession, 'handles')
-EndFunc
-
 Func _PreviousTab()
     Local Const $sCurrentBrowserTabHandle = _GetCurrentBrowserTabHandle()
     Local Const $aListOfBrowserTabHandles = _GetBrowserTabHandles()
@@ -77,10 +69,6 @@ Func _NextTab($bShouldClose = False)
     Next
 EndFunc
 
-Func _SwitchTab($sHandle)
-    _WD_Window($sSession, 'switch', '{"handle":"' & $sHandle & '"}')
-EndFunc
-
 Func _CloseTab()
     _NextTab(True)
 EndFunc
@@ -89,16 +77,16 @@ Func _BrowserBack()
     _WD_Action($sSession, 'back')
 EndFunc
 
-Func _ClickElement($sSelector)
-    _WaitForVisible($sSelector)
-    _WD_ElementAction($sSession, _FindElement($sSelector), 'click')
+Func _GetCurrentBrowserTabHandle()
+    Return _WD_Window($sSession, 'window')
 EndFunc
 
-Func _WaitForVisible($sSelector)
-    Local Const $iTimeoutInMilliseconds = 5000
-    Local Const $iElementVisibleFlag    = 1
+Func _GetBrowserTabHandles()
+    Return _WD_Window($sSession, 'handles')
+EndFunc
 
-    _WD_WaitElement($sSession, $mConfig.LocatorStrategy, $sSelector, $mConfig.Delay, $iTimeoutInMilliseconds, $iElementVisibleFlag)
+Func _SwitchTab($sHandle)
+    _WD_Window($sSession, 'switch', '{"handle":"' & $sHandle & '"}')
 EndFunc
 
 Func _FindElement($sSelector)
@@ -113,6 +101,11 @@ EndFunc
 
 Func _FindElements($sSelector)
     Return _WD_FindElement($sSession, $mConfig.LocatorStrategy, $sSelector, Default, True)
+EndFunc
+
+Func _ClickElement($sSelector)
+    _WaitForVisible($sSelector)
+    _WD_ElementAction($sSession, _FindElement($sSelector), 'click')
 EndFunc
 
 Func _GetElementText($sSelector)
@@ -139,13 +132,20 @@ Func _SetElementText($sSelector, $sValue)
     _WD_ElementAction($sSession, _FindElement($sSelector), 'value', $sValue)
 EndFunc
 
-Func _TakeElementScreenshot($sSelector)
-    Local Const $sResponse = _WD_ElementAction($sSession, _FindElement($sSelector), 'screenshot')
-    _CreateScreenshotFile($sResponse)
+Func _WaitForVisible($sSelector)
+    Local Const $iTimeoutInMilliseconds = 5000
+    Local Const $iElementVisibleFlag    = 1
+
+    _WD_WaitElement($sSession, $mConfig.LocatorStrategy, $sSelector, $mConfig.Delay, $iTimeoutInMilliseconds, $iElementVisibleFlag)
 EndFunc
 
 Func _TakeScreenshot()
     Local Const $sResponse = _WD_Window($sSession, 'screenshot')
+    _CreateScreenshotFile($sResponse)
+EndFunc
+
+Func _TakeElementScreenshot($sSelector)
+    Local Const $sResponse = _WD_ElementAction($sSession, _FindElement($sSelector), 'screenshot')
     _CreateScreenshotFile($sResponse)
 EndFunc
 
