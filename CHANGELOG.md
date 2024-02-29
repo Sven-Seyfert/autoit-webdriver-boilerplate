@@ -11,6 +11,19 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.7.0] - 2024-02-29
+
+### Documented
+
+- Add Discord link. [c1fee37](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/c1fee37bbbeb235d238a93f92319b0cbff366365)
+- Add webdriver actions function list. [5c736b5](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/5c736b537b7e9de33a2c58234d8858e8ef36f2bc)
+- Fix typos. [e75dcbe](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/e75dcbe4c4fc52b7199c0026e2cf08c48a6692ba)
+- Update README.md file. [b37f3d8](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/b37f3d808916619441a31cc47eea8d8872343051)
+
+### Styled
+
+- Reorder functions in file to get a better context overview. [591fb29](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/591fb29cb7190e53b1a3bbb188ba4d1505e3f570)
+
 ## [0.6.0] - 2024-02-27
 
 ### Added
@@ -80,7 +93,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.3.0...v0.4.0
