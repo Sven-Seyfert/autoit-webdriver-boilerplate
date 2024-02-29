@@ -37,28 +37,36 @@ The different kinds of **examples**, are (and will be) separated in different br
 
 In file `src/common/webdriver-actions-handler.au3` you can find the following functions which should help you in terms of browser automation actions. These functions are used in the different branches and especially in the `_Steps()` function and their subfunctions (entry point of the browser automation).
 
-| Function                               | Purpose                                                                                           |
-| ---                                    | ---                                                                                               |
-| `_NavigateTo($sUrl)`                   | Open the specific URL.                                                                            |
-| `_OpenNewTab()`                        | Open new tab and switch to the newly created tab context.                                         |
-| `_GetCurrentBrowserTabHandle()`        | Get the active browser tab handle, to deal with tab navigation.                                   |
-| `_GetBrowserTabHandles()`              | Get handles of all browser tabs, to deal with tab navigation.                                     |
-| `_PreviousTab()`                       | Switch to previous (left) tab with context switch.                                                |
-| `_NextTab($bShouldClose = False)`      | Switch to next (right) tab with context switch.                                                   |
-| `_SwitchTab($sHandle)`                 | Switch to tab handle context.                                                                     |
-| `_CloseTab()`                          | Close current active tab and switch to next (right) tab, with context.                            |
-| `_BrowserBack()`                       | Make a browser history back action (backward arrow).                                              |
-| `_ClickElement($sSelector)`            | Click DOM element by selector.                                                                    |
-| `_WaitForVisible($sSelector)`          | Wait until a element is visible.                                                                  |
-| `_FindElement($sSelector)`             | Get element id (UUID) which is necessary to interact with the DOM elements.                       |
-| `_FindElements($sSelector)`            | Get a list of elements (of UUIDs) for further interactions (see "_FindElement").                  |
-| `_GetElementText($sSelector)`          | Get the text of the specific DOM element.                                                         |
-| `_GetElementsTexts($sSelector)`        | Get a list of texts of the specific DOM elements.                                                 |
-| `_SetElementText($sSelector, $sValue)` | Set text to a element like an input field.                                                        |
-| `_TakeElementScreenshot($sSelector)`   | Create a screenshot of a specific area/element and save this screenshot in the output directory.  |
-| `_TakeScreenshot()`                    | Create a screenshot of the whole browser window and save this screenshot in the output directory. |
-| `_EnterIFrame($sSelector)`             | Move context to an iFrame.                                                                        |
-| `_LeaveIFrame()`                       | Leave the context of the previous entered iFrame (move out).                                      |
+| Area         | Function                             | Purpose                                                                                           |
+| ---          | ---                                  | ---                                                                                               |
+| `Navigation` |                                      |                                                                                                   |
+|              | _NavigateTo($sUrl)                   | Open the specific URL.                                                                            |
+|              | _OpenNewTab()                        | Open new tab and switch to the newly created tab context.                                         |
+|              | _PreviousTab()                       | Switch to previous (left) tab with context switch.                                                |
+|              | _NextTab($bShouldClose = False)      | Switch to next (right) tab with context switch.                                                   |
+|              | _CloseTab()                          | Close current active tab and switch to next (right) tab, with context.                            |
+|              | _BrowserBack()                       | Make a browser history back action (backward arrow).                                              |
+|              | _GetCurrentBrowserTabHandle()        | (internal) Get the active browser tab handle, to deal with tab navigation.                        |
+|              | _GetBrowserTabHandles()              | (internal) Get handles of all browser tabs, to deal with tab navigation.                          |
+|              | _SwitchTab($sHandle)                 | (internal) Switch to tab handle context.                                                          |
+| `Elements`   |                                      |                                                                                                   |
+|              | _FindElement($sSelector)             | Get element id (UUID) which is necessary to interact with the DOM elements.                       |
+|              | _FindElements($sSelector)            | Get a list of elements (of UUIDs) for further interactions (see "_FindElement").                  |
+|              | _ClickElement($sSelector)            | Click DOM element by selector.                                                                    |
+|              | _GetElementText($sSelector)          | Get the text of the specific DOM element.                                                         |
+|              | _GetElementsTexts($sSelector)        | Get a list of texts of the specific DOM elements.                                                 |
+|              | _SetElementText($sSelector, $sValue) | Set text to a element like an input field.                                                        |
+|              | _WaitForVisible($sSelector)          | Wait until a element is visible.                                                                  |
+| `Screenshot` |                                      |                                                                                                   |
+|              | _TakeScreenshot()                    | Create a screenshot of the whole browser window and save this screenshot in the output directory. |
+|              | _TakeElementScreenshot($sSelector)   | Create a screenshot of a specific area/element and save this screenshot in the output directory.  |
+|              | _CreateScreenshotFile($sResponse)    | (internal) Write screenshot data to output directory.                                             |
+| `iFrames`    |                                      |                                                                                                   |
+|              | _EnterIFrame($sSelector)             | Move context to an iFrame.                                                                        |
+|              | _LeaveIFrame()                       | Leave the context of the previous entered iFrame (move out).                                      |
+|              |                                      |                                                                                                   |
+|              |                                      |                                                                                                   |
+|              |                                      |                                                                                                   |
 
 ## Getting started
 
