@@ -89,6 +89,10 @@ Func _SwitchTab($sHandle)
     _WD_Window($sSession, 'switch', '{"handle":"' & $sHandle & '"}')
 EndFunc
 
+Func _ExistsElement($sSelector)
+    Return _FindElement($sSelector) <> ''
+EndFunc
+
 Func _FindElement($sSelector)
     Local $sElement = _WD_FindElement($sSession, $mConfig.LocatorStrategy, $sSelector)
     If @error <> $_WD_ERROR_Success Then
