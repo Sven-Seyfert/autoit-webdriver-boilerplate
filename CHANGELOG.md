@@ -11,6 +11,22 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.8.0] - 2024-03-04
+
+### Added
+
+- Function '_ExistsElement' which wraps the '_FindElement' result as boolean. [30aa238](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/30aa238fd0bf42d35f5f33ac9118516643e97d9e)
+- Helper function '_Print' to utils functions. [fb0b672](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/fb0b672c4b86b3030883bb4c0fe00641c4639ea5)
+- New config setting for 'find element error' handling. [6a260fe](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/6a260fe7c4b283a4b4defa25250f94803a583dc7)
+
+### Changed
+
+- Set new default value 'maximize' to browser mode variable. [7b28668](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/7b28668a22098901bce7fe4d98c7c3c4798a5659)
+
+### Documented
+
+- Update README.md file by new function '_ExistsElement'. [34c782f](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/34c782fd2b08653864206accb6fcfb0bdd43c19b)
+
 ## [0.7.0] - 2024-02-29
 
 ### Documented
@@ -93,7 +109,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.4.0...v0.5.0
