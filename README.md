@@ -50,6 +50,7 @@ In file `src/common/webdriver-actions-handler.au3` you can find the following fu
 |              | _GetBrowserTabHandles()              | (internal) Get handles of all browser tabs, to deal with tab navigation.                          |
 |              | _SwitchTab($sHandle)                 | (internal) Switch to tab handle context.                                                          |
 | `Elements`   |                                      |                                                                                                   |
+|              | _ExistsElement($sSelector)           | Returns the boolean statement about whether an element exists or not.                             |
 |              | _FindElement($sSelector)             | Get element id (UUID) which is necessary to interact with the DOM elements.                       |
 |              | _FindElements($sSelector)            | Get a list of elements (of UUIDs) for further interactions (see "_FindElement").                  |
 |              | _ClickElement($sSelector)            | Click DOM element by selector.                                                                    |
