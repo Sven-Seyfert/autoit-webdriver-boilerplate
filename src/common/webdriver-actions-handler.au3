@@ -92,8 +92,9 @@ EndFunc
 Func _FindElement($sSelector)
     Local $sElement = _WD_FindElement($sSession, $mConfig.LocatorStrategy, $sSelector)
     If @error <> $_WD_ERROR_Success Then
-        ConsoleWrite('Error for find element with selector ''' & $sSelector & '''.' & @CRLF)
-        _TeardownDriver() ; HINT: Shutdown webdriver on error (optional, comment out if necessary).
+        If $mConfig.TeardownOnFindElementError Then
+            _TeardownDriver()
+        EndIf
     EndIf
 
     Return $sElement

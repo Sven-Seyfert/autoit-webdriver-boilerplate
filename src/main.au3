@@ -55,5 +55,9 @@ Func _SetGlobalValues(ByRef $mConfig)
     ; HINT: This is the default installation path, change this in case it's another on your system.
     $mConfig.FirefoxBinary = 'C:\Program Files\Mozilla Firefox\firefox.exe'
 
+    ; HINT: Shutdown webdriver on find element error (default is True).
+    $mConfig.TeardownOnFindElementError = True
+
+    ; do not change this
     $bAlreadyTeardown = False
 EndFunc
