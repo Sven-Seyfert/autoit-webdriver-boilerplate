@@ -10,7 +10,7 @@ Func _Steps()
     _NavigateBetweenPages()
     _GetTableTexts()
 
-    ConsoleWrite('Automation steps completed!' & @CRLF)
+    _Print('Automation steps completed!')
     Sleep(1500)
 EndFunc
 
