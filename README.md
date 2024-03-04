@@ -65,9 +65,6 @@ In file `src/common/webdriver-actions-handler.au3` you can find the following fu
 | `iFrames`    |                                      |                                                                                                   |
 |              | _EnterIFrame($sSelector)             | Move context to an iFrame.                                                                        |
 |              | _LeaveIFrame()                       | Leave the context of the previous entered iFrame (move out).                                      |
-|              |                                      |                                                                                                   |
-|              |                                      |                                                                                                   |
-|              |                                      |                                                                                                   |
 
 ## Getting started
 
@@ -91,17 +88,21 @@ Adjust the content/values of function `_SetGlobalValues()` in `src\main.au3`.
 
 ``` autoit
 Func _SetGlobalValues(ByRef $mConfig)
-    $mConfig.Driver          = 'firefox' ; chrome|firefox|msedge
-    $mConfig.IsHeadlessMode  = False     ; False|True
-    $mConfig.Delay           = 300       ; delay for supporting a robust waiting behavior (page load, clicks, texts etc.)
-    $mConfig.BrowserWidth    = 1920      ; or 1440, etc.
-    $mConfig.BrowserHeight   = 1080      ; or 810, etc.
-    $mConfig.LocatorStrategy = Null      ; will be set in function "_SetLocatorStrategy()"
-    $mConfig.BrowserMode     = 'size'    ; fullscreen|maximize|size (default is 'size' which applies .BrowserWidth and .BrowserHeight)
+    $mConfig.Driver          = 'firefox'  ; chrome|firefox|msedge
+    $mConfig.IsHeadlessMode  = False      ; False|True
+    $mConfig.Delay           = 300        ; delay for supporting a robust waiting behavior (page load, clicks, texts etc.)
+    $mConfig.BrowserWidth    = 1920       ; or 1440, etc.
+    $mConfig.BrowserHeight   = 1080       ; or 810, etc.
+    $mConfig.LocatorStrategy = Null       ; will be set in function "_SetLocatorStrategy()"
+    $mConfig.BrowserMode     = 'maximize' ; fullscreen|maximize|size (default is 'size' which applies .BrowserWidth and .BrowserHeight)
 
     ; HINT: This is the default installation path, change this in case it's another on your system.
     $mConfig.FirefoxBinary = 'C:\Program Files\Mozilla Firefox\firefox.exe'
 
+    ; HINT: Shutdown webdriver on find element error (default is True).
+    $mConfig.TeardownOnFindElementError = True
+
+    ; do not change this
     $bAlreadyTeardown = False
 EndFunc
 ```
