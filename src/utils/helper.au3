@@ -6,6 +6,10 @@ Func _GetCount($aList)
     Return UBound($aList) - 1
 EndFunc
 
+Func _Print($sString)
+    ConsoleWrite(StringFormat('%s\n', $sString))
+EndFunc
+
 Func _WriteFileBinary($sFile, $bData)
     Local Const $iBinaryOverwriteCreateMode = 16 + 2 + 8
 
