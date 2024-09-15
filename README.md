@@ -7,6 +7,7 @@
 
 [![license](https://img.shields.io/badge/license-MIT-indianred.svg?style=flat-square&logo=spdx&logoColor=white)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/main/LICENSE.md)
 [![release](https://img.shields.io/github/release/Sven-Seyfert/au3webdriver-boilerplate.svg?color=slateblue&style=flat-square&logo=github)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/releases/latest)
+[![au3WebDriver](https://img.shields.io/badge/au3WebDriver-v1.4.0--rc-slateblue.svg?style=flat-square&logo=github&logoColor=white)]()
 [![autoit](https://img.shields.io/badge/lang-AutoIt-lightskyblue.svg?style=flat-square&logo=autodesk&logoColor=white)]()
 [![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/au3webdriver-boilerplate.svg?color=darkgoldenrod&style=flat-square&logo=github)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commits/main)
 [![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/au3webdriver-boilerplate.svg?color=darkolivegreen&style=flat-square&logo=github)](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/graphs/contributors)
@@ -26,12 +27,12 @@ The project "au3webdriver-boilerplate" can be used as quick entry point for the 
 
 The different kinds of **examples**, are (and will be) separated in different branches of the repository. In this overview you basically can see which branch contains which example of WebDriver actions. Some examples and their code could be implemented in a shorter way, but this is made by design and follows a educational purpose.
 
-| Branch                      | Description of the WebDriver actions                                                                                                                     | Websites in use                                                                                                                                                 | Browser automation<br>flow (steps)                                                                                            |
-| ---                         | ---                                                                                                                                                      | ---                                                                                                                                                             | ---                                                                                                                           |
-| `main`                      | - open website<br>- confirm cookie consent dialog<br>- navigate between pages<br>- get table texts                                                       | - https://www.w3schools.com/                                                                                                                                    | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/main/src/website-steps-handler.au3)                      |
-| `fill-form-take-screenshot` | - open website<br>- confirm cookie consent dialog<br>- navigate to specific area<br>- fill a form<br>- take screenshots                                  | - https://demoqa.com/                                                                                                                                           | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/fill-form-take-screenshot/src/website-steps-handler.au3) |
-| `google-search`             | - open website<br>- confirm cookie consent dialog<br>- enter search query<br>- choose specific match by text                                             | - https://www.google.de/                                                                                                                                        | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/google-search/src/website-steps-handler.au3)             |
-| `multiple-browser-tabs`     | - open website<br>- open three more websites in separate browser tabs<br>- do actions (screenshots) for each tabs<br>- navigate through tabs, close tabs | - https://github.com/Sven-Seyfert/au3webdriver-boilerplate<br>- https://www.autoitscript.com/wiki/WebDriver#FAQ<br>- https://autoit.de<br>- https://pkg.go.dev  | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/multiple-browser-tabs/src/website-steps-handler.au3)     |
+| Branch                      | Description of the<br>WebDriver actions                                                                                                                  | Websites in use                                                                                                                                                 | Browser automation<br>flow (steps)                                                                                            | Test<br>Chrome                   | Test<br>Firefox                 | Test<br>MSEdge                  |
+| ---                         | ---                                                                                                                                                      | ---                                                                                                                                                             | ---                                                                                                                           | ---                              | ---                             | ---                             |
+| `main`                      | - open website<br>- confirm cookie consent dialog<br>- navigate between pages<br>- get table texts                                                       | - https://www.w3schools.com/                                                                                                                                    | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/main/src/website-steps-handler.au3)                      | 🟢 2024-09-14<br>v128.0.6613.138 | 🟢 2024-09-14<br>v130.0.0.2283 | 🟢 2024-09-14<br>v128.0.2739.79 |
+| `fill-form-take-screenshot` | - open website<br>- confirm cookie consent dialog<br>- navigate to specific area<br>- fill a form<br>- take screenshots                                  | - https://demoqa.com/                                                                                                                                           | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/fill-form-take-screenshot/src/website-steps-handler.au3) |                                  |                                 |                                 |
+| `google-search`             | - open website<br>- confirm cookie consent dialog<br>- enter search query<br>- choose specific match by text                                             | - https://www.google.de/                                                                                                                                        | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/google-search/src/website-steps-handler.au3)             |                                  |                                 |                                 |
+| `multiple-browser-tabs`     | - open website<br>- open three more websites in separate browser tabs<br>- do actions (screenshots) for each tabs<br>- navigate through tabs, close tabs | - https://github.com/Sven-Seyfert/au3webdriver-boilerplate<br>- https://www.autoitscript.com/wiki/WebDriver#FAQ<br>- https://autoit.de<br>- https://pkg.go.dev  | [link](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/blob/multiple-browser-tabs/src/website-steps-handler.au3)     |                                  |                                 |                                 |
 
 #### *WebDriver actions function list*
 
@@ -88,18 +89,19 @@ Adjust the content/values of function `_SetGlobalValues()` in `src\main.au3`.
 
 ``` autoit
 Func _SetGlobalValues(ByRef $mConfig)
-    $mConfig.Driver          = 'firefox'  ; chrome|firefox|msedge
-    $mConfig.IsHeadlessMode  = False      ; False|True
-    $mConfig.Delay           = 300        ; delay for supporting a robust waiting behavior (page load, clicks, texts etc.)
-    $mConfig.BrowserWidth    = 1920       ; or 1440, etc.
-    $mConfig.BrowserHeight   = 1080       ; or 810, etc.
-    $mConfig.LocatorStrategy = Null       ; will be set in function "_SetLocatorStrategy()"
-    $mConfig.BrowserMode     = 'maximize' ; fullscreen|maximize|size (default is 'size' which applies .BrowserWidth and .BrowserHeight)
+    $mConfig.Driver            = 'firefox' ; chrome|firefox|msedge
+    $mConfig.IsHeadlessMode    = False     ; False|True
+    $mConfig.IgnoreSSLAndCerts = False     ; False|True
+    $mConfig.Delay             = 300       ; delay for supporting a robust waiting behavior (page load, clicks, texts etc.)
+    $mConfig.BrowserWidth      = 1600      ; or 1920, etc.
+    $mConfig.BrowserHeight     = 900       ; or 1080, etc.
+    $mConfig.LocatorStrategy   = Null      ; will be set in function "_SetLocatorStrategy()"
+    $mConfig.BrowserMode       = 'size'    ; fullscreen|maximize|size (default is 'size' which applies .BrowserWidth and .BrowserHeight)
 
-    ; HINT: This is the default installation path, change this in case it's another on your system.
+    ; This is the default installation path, change this in case it's another on your system.
     $mConfig.FirefoxBinary = 'C:\Program Files\Mozilla Firefox\firefox.exe'
 
-    ; HINT: Shutdown webdriver on find element error (default is True).
+    ; Shutdown webdriver on find element error (default is True).
     $mConfig.TeardownOnFindElementError = True
 
     ; do not change this
