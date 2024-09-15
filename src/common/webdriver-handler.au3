@@ -52,40 +52,34 @@ Func _SetDriverOptions()
     Local Const $sDriverPath = _PathFull('..\driver')
 
     Local $mChrome[]
-          $mChrome.Exe           = 'chromedriver.exe'
-          $mChrome.Port          = 9515
-          $mChrome.DriverParams  = '--verbose --log-path="' & _Backslash($sDriverPath) & 'chromedriver.log"'
+          $mChrome.Name          = 'chromedriver'
+          $mChrome.Port          = _WD_GetFreePort(9515, 9516)
+          $mChrome.DriverParams  = StringFormat('--port=%s --verbose --log-path="%s%s.log"', $mChrome.Port, _Backslash($sDriverPath), $mChrome.Name)
 
     Local $mFirefox[]
-          $mFirefox.Exe          = 'geckodriver.exe'
-          $mFirefox.Port         = 4444
-          $mFirefox.DriverParams = '--log trace'
+          $mFirefox.Name         = 'geckodriver'
+          $mFirefox.Port         = _WD_GetFreePort(9517, 9518)
+          $mFirefox.DriverParams = StringFormat('--port %s --log trace', $mFirefox.Port)
 
     Local $mEdge[]
-          $mEdge.Exe             = 'msedgedriver.exe'
-          $mEdge.Port            = 9515
-          $mEdge.DriverParams    = '--verbose --log-path="' & _Backslash($sDriverPath) & 'msedgedriver.log"'
-
-    Local $sDriverExeFilePath, $iPort, $sDriverParams
+          $mEdge.Name            = 'msedgedriver'
+          $mEdge.Port            = _WD_GetFreePort(9519, 9520)
+          $mEdge.DriverParams    = StringFormat('--port=%s --verbose --log-path="%s%s.log"', $mEdge.Port, _Backslash($sDriverPath), $mEdge.Name)
 
     Switch StringLower($mConfig.Driver)
         Case 'chrome'
-            $sDriverExeFilePath = _Backslash($sDriverPath) & $mChrome.Exe
-            $iPort              = $mChrome.Port
-            $sDriverParams      = $mChrome.DriverParams
+            _WD_Option('Driver',       _Backslash($sDriverPath) & $mChrome.Name & '.exe')
+            _WD_Option('Port',         $mChrome.Port)
+            _WD_Option('DriverParams', $mChrome.DriverParams)
         Case 'firefox'
-            $sDriverExeFilePath = _Backslash($sDriverPath) & $mFirefox.Exe
-            $iPort              = $mFirefox.Port
-            $sDriverParams      = $mFirefox.DriverParams
+            _WD_Option('Driver',       _Backslash($sDriverPath) & $mFirefox.Name & '.exe')
+            _WD_Option('Port',         $mFirefox.Port)
+            _WD_Option('DriverParams', $mFirefox.DriverParams)
         Case 'msedge'
-            $sDriverExeFilePath = _Backslash($sDriverPath) & $mEdge.Exe
-            $iPort              = $mEdge.Port
-            $sDriverParams      = $mEdge.DriverParams
+            _WD_Option('Driver',       _Backslash($sDriverPath) & $mEdge.Name & '.exe')
+            _WD_Option('Port',         $mEdge.Port)
+            _WD_Option('DriverParams', $mEdge.DriverParams)
     EndSwitch
-
-    _WD_Option('Driver', $sDriverExeFilePath)
-    _WD_Option('Port', $iPort)
-    _WD_Option('DriverParams', $sDriverParams)
 EndFunc
 
 Func _BuildChromeDriverCapabilities()
@@ -93,6 +87,9 @@ Func _BuildChromeDriverCapabilities()
     _WD_CapabilitiesAdd('w3c', True)
     _WD_CapabilitiesAdd('excludeSwitches', 'enable-automation')
     _WD_CapabilitiesAdd('args', StringFormat('--window-size=%s,%s', $mConfig.BrowserWidth, $mConfig.BrowserHeight))
+    _WD_CapabilitiesAdd('args', '--no-default-browser-check')
+    _WD_CapabilitiesAdd('args', '--disable-search-engine-choice-screen')
+
     If $mConfig.IgnoreSSLAndCerts Then
         _WD_CapabilitiesAdd('acceptInsecureCerts', True)                     ; recommended
         _WD_CapabilitiesAdd('args', '--ignore-ssl-errors')                   ; optional
