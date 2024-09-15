@@ -4,7 +4,7 @@ Func _GetNewestDriver()
 EndFunc
 
 Func _SetLogLevel()
-    ; HINT: Global constants provided in "wd_core.au3" file.
+    ; Global constants provided in "wd_core.au3" file.
     ; The following values are provided.
     ; $_WD_DEBUG_None  => no logging
     ; $_WD_DEBUG_Error => logging in case of error
@@ -15,7 +15,7 @@ Func _SetLogLevel()
 EndFunc
 
 Func _SetLocatorStrategy(ByRef $mConfig)
-    ; HINT: Global constants provided in "wd_core.au3" file.
+    ; Global constants provided in "wd_core.au3" file.
     ; The following values are provided.
     ; $_WD_LOCATOR_ByCSSSelector     => css selector
     ; $_WD_LOCATOR_ByXPath           => xpath
@@ -93,6 +93,12 @@ Func _BuildChromeDriverCapabilities()
     _WD_CapabilitiesAdd('w3c', True)
     _WD_CapabilitiesAdd('excludeSwitches', 'enable-automation')
     _WD_CapabilitiesAdd('args', StringFormat('--window-size=%s,%s', $mConfig.BrowserWidth, $mConfig.BrowserHeight))
+    If $mConfig.IgnoreSSLAndCerts Then
+        _WD_CapabilitiesAdd('acceptInsecureCerts', True)                     ; recommended
+        _WD_CapabilitiesAdd('args', '--ignore-ssl-errors')                   ; optional
+        _WD_CapabilitiesAdd('args', '--ignore-certificate-errors')           ; optional
+        _WD_CapabilitiesAdd('args', '--ignore-certificate-errors-spki-list') ; optional
+    EndIf
 
     If $mConfig.IsHeadlessMode Then
         _WD_CapabilitiesAdd('args', '--headless')
