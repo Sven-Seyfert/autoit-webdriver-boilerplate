@@ -11,6 +11,23 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.9.0] - 2024-09-15
+
+### Added
+
+- IgnoreSSLAndCerts option to global values configuration. [b954b0e](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/b954b0eee43a6ca014a9e7e69fe7c0adafa15846)
+- Restore option to _WD_Window function (restore window size). [e46a6ad](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/e46a6ad73a6873ff682707fae44b45b31fc07049)
+
+### Changed
+
+- Apply upcoming au3WebDriver release changes (v1.4.0). [28f7fc1](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/28f7fc18737ca7fa0108682737443b00f7dc210a)
+- Port handling in _SetDriverOptions function. [627d223](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/627d223a21de0ab19e96e84fcc98982d572ddae1)
+- Reduce the navigation actions in '_NavigateBetweenPages()'. [d0ab3f6](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/d0ab3f69f4528710892b38acb8aae164aad4334b)
+
+### Documented
+
+- Extend README.md file by browser testing information. [ba57870](https://github.com/Sven-Seyfert/au3webdriver-boilerplate/commit/ba578703f2f2ca1154300e328cd9fbb6c45fd729)
+
 ## [0.8.0] - 2024-03-04
 
 ### Added
@@ -109,7 +126,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.8.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/Sven-Seyfert/au3webdriver-boilerplate/compare/v0.5.0...v0.6.0
