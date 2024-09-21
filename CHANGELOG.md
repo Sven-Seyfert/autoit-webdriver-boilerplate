@@ -11,6 +11,17 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [0.10.0] - 2024-09-21
+
+### Changed
+
+- Adopt the latest release changes (v1.4.0). [dd1be2c](https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/commit/dd1be2cf6804bd3ea7c03374b643d90f90e33ab0)
+
+### Documented
+
+- Rename project and repo to 'autoit-webdriver-boilerplate'. [c29a4a0](https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/commit/c29a4a08e5a3d61b8a55e3b55f398da08e67591b)
+- Update README.md file. [2e71f4a](https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/commit/2e71f4a2cd3dee97593f22987a58eb5b3286b750)
+
 ## [0.9.0] - 2024-09-15
 
 ### Added
@@ -126,7 +137,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Initial commit with all repository data and dependencies.
 
-[Unreleased]: https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Sven-Seyfert/autoit-webdriver-boilerplate/compare/v0.6.0...v0.7.0
